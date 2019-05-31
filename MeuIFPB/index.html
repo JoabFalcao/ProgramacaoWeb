@@ -2,23 +2,49 @@
 <html lang="en" dir="ltr">
   <head>
     <title></title>
+
+    <style media="screen">
+      table {
+        border: 4px dashed #7B68EE;
+      }
+
+      tr, td{
+        border: 4px solid #800080;
+        padding: 4px;
+      }
+    </style>
   </head>
   <body>
     <a href="http://www.ifpb.edu.br/">
       <img src="IMAGEM/LOGO.png/">
     </a>
-    <a href="#">
-      <img src="https://pm1.narvii.com/6357/17153d61f79de4d59c0a9df1018302c8c3455141_hq.jpg">
-    </a>
     <table border="1">
       <tr>
-        <td>Nome</td>
-        <td>Nascimento</td>
-        <td>Endereço</td>
+        <th>
+          Aluno
+        </th>
+        <th>Nota</th>
+        <th>Situação</th>
       </tr>
       <tr>
-        <td></td>
+        <td>José</td>
+        <td>8.5</td>
+        <td rowspan='3'>Aprovado</td>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>9.6</td>
+      </tr>
+      <tr>
+        <td colspan="2">Total 17.5</td>
       </tr>
     </table>
+    <form>
+      <input type='text'/>
+
+      <input type='password'/>
+
+      <input type='submit' value='enviar'/>
+    </form>
   </body>
 </html>
