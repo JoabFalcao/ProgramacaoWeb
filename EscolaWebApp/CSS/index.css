@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.meu-container{
+  margin: 0 auto;
+  padding: 0;
+  border: 4px solid #cce6ff;
+  width: 80%;
+  min-height: 100vh;
+
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  background-color: #99ccff;
+}
+
+main {
+  background-color: #99ccff;
+  flex-grow: 1;
+
+}
+
+footer {
+  background-color: #99ccff;
+}
