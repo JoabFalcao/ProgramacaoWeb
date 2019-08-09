@@ -31,13 +31,30 @@
       </header>
       <main>
 
-        <div class="wrapper">
-          <div class="row">
-            <div class="col">
-                <div><a href="tb_campus.html"><b></b></a></div>
-            </div>
-          </div>
-        </div>
+        <form action="http://localhost:5000/form_aluno" method='POST'>
+
+          <label for= 'Nome'> Nome:</label>
+          <input type= 'text' name= 'Nome'><br>
+
+          <label for= 'Matricula'> Matrícula:</label>
+          <input type= 'text' name= 'Matricula'><br>
+
+          <label for= 'CPF'> CPF: </label>
+          <input type= 'text' name= 'CPF'><br>
+
+          <label for= 'Nascimento'> Nascimento: </label>
+          <input type= 'text' name= 'Nascimento'><br>
+
+          <label for= 'fk_id_endereco'> FK_Endereço: </label>
+          <input type= 'text' name= 'fk_id_endereco'><br>
+
+          <label for= 'fk_id_curso'> FK_Curso: </label>
+          <input type= 'text' name= 'fk_id_curso'><br>
+
+          <input type= 'submit' name='cadastrar' value= 'Cadastrar'>
+
+
+        </form>
       </main>
       <footer>
         Copyright © Todos os direitos reservados.

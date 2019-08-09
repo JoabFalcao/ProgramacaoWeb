@@ -31,13 +31,18 @@
       </header>
       <main>
 
-        <div class="wrapper">
-          <div class="row">
-            <div class="col">
-                <div><a href="tb_campus.html"><b></b></a></div>
-            </div>
-          </div>
-        </div>
+        <form action="http://localhost:5000/form_turma" method='POST'>
+
+          <label for= 'Nome'> Nome:</label>
+          <input type= 'text' name= 'Nome'><br>
+
+          <label for= 'fk_id_curso'> FK_Curso:</label>
+          <input type= 'text' name= 'fk_id_curso'><br>
+
+          <input type= 'submit' name='cadastrar' value= 'Cadastrar'>
+
+
+        </form>
       </main>
       <footer>
         Copyright © Todos os direitos reservados.

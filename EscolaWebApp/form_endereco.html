@@ -31,13 +31,27 @@
       </header>
       <main>
 
-        <div class="wrapper">
-          <div class="row">
-            <div class="col">
-                <div><a href="tb_campus.html"><b></b></a></div>
-            </div>
-          </div>
-        </div>
+        <form action="http://localhost:5000/form_endereco" method='POST'>
+
+          <label for= 'Logradouro'> Logradouro:</label>
+          <input type= 'text' name= 'Logradouro'><br>
+
+          <label for= 'Complemento'> Complemento:</label>
+          <input type= 'text' name= 'Complemento'><br>
+
+          <label for= 'Bairro'> Bairro: </label>
+          <input type= 'text' name= 'Bairro'><br>
+
+          <label for= 'CEP'> CEP: </label>
+          <input type= 'text' name= 'CEP'><br>
+
+          <label for= 'Numero'> Número: </label>
+          <input type= 'text' name= 'Numero'><br>
+
+          <input type= 'submit' name='cadastrar' value= 'Cadastrar'>
+
+
+        </form>
       </main>
       <footer>
         Copyright © Todos os direitos reservados.
