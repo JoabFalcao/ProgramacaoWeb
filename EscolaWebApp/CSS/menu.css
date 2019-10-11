@@ -1,18 +1,17 @@
 .navigation {
   list-style: none;
   margin: 0;
-  background: deepskyblue;
+  background: Brown;
   border: 2px solid black;
-
   display: flex;
   flex-direction: row-reverse;
 }
 
 .navigation a {
-  text-decoration none;
+  text-decoration: none;
   display: block;
   padding: 1em;
-  color: white;
+  color: White;
 }
 
 .navigation a:hover {
