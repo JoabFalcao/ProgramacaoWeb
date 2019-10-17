@@ -37,14 +37,22 @@
         <p>
           <b> <u>Cadastrar Turma</u> </b>
         </p>
-        <form action="http://localhost:5000/form_turma" method='POST'>
+        <form action="http://localhost:5000/form_turma" method='POST' name="turmaController">
           <div class="form-group">
             <label for= 'Nome'> Nome:</label>
-            <input type= 'text' name= 'Nome' class="form-control">
+            <input type= 'text' ng-model='nome' name= 'Nome' class="form-control">
+
+            <div ng-show="turmaController.nome.$invalid && turmaController.nome.$dirty" class="alert alert-danger">
+              Insira o nome!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'fk_id_curso'> FK_Curso:</label>
-            <input type= 'text' name= 'fk_id_curso'class="form-control">
+            <input type= 'text' ng-model='fk_id_curso' name= 'fk_id_curso'class="form-control">
+
+            <div ng-show="turmaController.fk_id_curso.$invalid && turmaController.fk_id_curso.$dirty" class="alert alert-danger">
+              Insira o curso!
+            </div>
           </div>
           <input type= 'submit' name='cadastrar' value= 'Cadastrar' class="btn btn-primary btn-lg btn-block">
         </form>

@@ -37,26 +37,46 @@
         <p>
           <b> <u>Cadastrar Endereço</u> </b>
         </p>
-        <form action="http://localhost:5000/form_endereco" method='POST'>
+        <form action="http://localhost:5000/form_endereco" method='POST' name="enderecoController">
           <div class="form-group">
             <label for= 'Logradouro'> Logradouro:</label>
-            <input type= 'text' name= 'Logradouro'class="form-control">
+            <input type= 'text' ng-model='logradouro' name= 'Logradouro'class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="enderecoController.logradouro.$invalid && enderecoController.logradouro.$dirty" class="alert alert-danger">
+              Insira o logradouro!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'Complemento'> Complemento:</label>
-            <input type= 'text' name= 'Complemento' class="form-control">
+            <input type= 'text' ng-model='complemento' name= 'Complemento' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="enderecoController.complemento.$invalid && enderecoController.complemento.$dirty" class="alert alert-danger">
+              Insira o complemento!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'Bairro'> Bairro: </label>
-            <input type= 'text' name= 'Bairro' class="form-control">
+            <input type= 'text' ng-model='bairro' name= 'Bairro' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="enderecoController.bairro.$invalid && enderecoController.bairro.$dirty" class="alert alert-danger">
+              Insira o bairro!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'CEP'> CEP: </label>
-            <input type= 'text' name= 'CEP' class="form-control">
+            <input type= 'text' ng-model='cep' name= 'CEP' class="form-control" required ng-minlenght="8" ng-maxlenght="8">
+
+            <div ng-show="enderecoController.cep.$invalid && enderecoController.cep.$dirty" class="alert alert-danger">
+              Insira o CEP!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'Numero'> Número: </label>
-            <input type= 'text' name= 'Numero' class="form-control">
+            <input type= 'text' ng-model='numero' name= 'Numero' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="enderecoController.numero.$invalid && enderecoController.numero.$dirty" class="alert alert-danger">
+              Insira o número!
+            </div>
           </div>
           <input type= 'submit' name='cadastrar' value= 'Cadastrar'class="btn btn-primary btn-lg btn-block">
         </form>

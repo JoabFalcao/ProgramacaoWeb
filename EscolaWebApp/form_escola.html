@@ -37,18 +37,30 @@
         <p>
           <b> <u>Cadastrar Escola</u> </b>
         </p>
-        <form action="http://localhost:5000/form_escola" method='POST'>
+        <form action="http://localhost:5000/form_escola" method='POST' name="escolaController">
           <div class="form-group">
             <label for= 'Nome'> Nome:</label>
-            <input type= 'text' name= 'Nome' class="form-control">
+            <input type= 'text' ng-model='nome' name= 'Nome' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="escolaController.nome.$invalid && escolaController.nome.$dirty" class="alert alert-danger">
+              Insira o nome!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'fk_id_endereco'> FK_Endereço:</label>
-            <input type= 'text' name= 'fk_id_endereco' class="form-control">
+            <input type= 'text' ng-model='fk_id_endereco' name= 'fk_id_endereco' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="escolaController.fk_id_endereco.$invalid && escolaController.fk_id_endereco.$dirty" class="alert alert-danger">
+              Insira a escola!
+            </div>
           </div>
           <div class="form-group">
             <label for= 'fk_id_campus'> FK_Campus:</label>
-            <input type= 'text' name= 'fk_id_campus' class="form-control">
+            <input type= 'text' ng-model='fk_id_campus' name= 'fk_id_campus' class="form-control" required ng-minlenght="2" ng-maxlenght="50">
+
+            <div ng-show="escolaController.fk_id_campus.$invalid && escolaController.fk_id_campus.$dirty" class="alert alert-danger">
+              Insira o campus!
+            </div>
           </div>
           <input type= 'submit' name='cadastrar' value= 'Cadastrar' class="btn btn-primary btn-lg btn-block">
         </form>
